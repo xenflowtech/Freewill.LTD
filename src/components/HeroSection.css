@@ -1,0 +1,178 @@
+.hero-section {
+  background-color: #6b6b6b;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  flex: 1;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.hero-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.family-illustration {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+.sofa {
+  width: 100%;
+  height: 120px;
+  background-color: #20b2aa;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.family-members {
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0 40px;
+}
+
+.person {
+  width: 60px;
+  height: 80px;
+  background-color: #ffd700;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: relative;
+}
+
+.person::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #ffd700;
+  border-radius: 50%;
+}
+
+.person::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.father {
+  height: 90px;
+}
+
+.mother {
+  height: 85px;
+}
+
+.child1, .child2 {
+  height: 60px;
+  width: 50px;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .family-illustration {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .family-illustration {
+    width: 250px;
+    height: 150px;
+  }
+  
+  .sofa {
+    height: 80px;
+  }
+  
+  .family-members {
+    bottom: 80px;
+    padding: 0 20px;
+  }
+  
+  .person {
+    width: 40px;
+    height: 50px;
+  }
+  
+  .father {
+    height: 60px;
+  }
+  
+  .mother {
+    height: 55px;
+  }
+  
+  .child1, .child2 {
+    height: 40px;
+    width: 35px;
+  }
+}

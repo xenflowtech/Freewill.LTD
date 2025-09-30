@@ -1,0 +1,393 @@
+.congratulations-page {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.congratulations-main {
+  background-color: white;
+  min-height: calc(100vh - 200px);
+  padding: 80px 0;
+}
+
+.congratulations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Congratulations Section */
+.congratulations-section {
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.success-icon {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.main-checkmark {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.checkmark-icon {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.floating-circles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.1);
+  animation: float 3s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  left: 50%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 15px;
+  height: 15px;
+  top: 30px;
+  right: 20px;
+  animation-delay: 0.5s;
+}
+
+.circle-3 {
+  width: 25px;
+  height: 25px;
+  bottom: 20px;
+  left: 20px;
+  animation-delay: 1s;
+}
+
+.circle-4 {
+  width: 18px;
+  height: 18px;
+  top: 50px;
+  left: 10px;
+  animation-delay: 1.5s;
+}
+
+.circle-5 {
+  width: 22px;
+  height: 22px;
+  bottom: 40px;
+  right: 10px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.congratulations-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.congratulations-subtitle {
+  font-size: 1.3rem;
+  color: #1f2937;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.congratulations-description {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.download-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Advertisement Section */
+.ads-section {
+  margin-bottom: 60px;
+}
+
+.ads-divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.ads-label {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.ads-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.ads-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ad-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ad-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ad-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.ad-image-1 {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  position: relative;
+}
+
+.ad-image-1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 4px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
+}
+
+.ad-image-2 {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  position: relative;
+}
+
+.ad-image-2::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 4px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.ad-image-3 {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  position: relative;
+}
+
+.ad-image-3::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 50%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.ad-image-4 {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  position: relative;
+}
+
+.ad-image-4::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 4px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.ad-content {
+  text-align: left;
+}
+
+.ad-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.ad-description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.ad-button {
+  background: white;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ad-button:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .congratulations-container {
+    padding: 0 15px;
+  }
+  
+  .congratulations-title {
+    font-size: 2.5rem;
+  }
+  
+  .congratulations-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .congratulations-description {
+    font-size: 1rem;
+  }
+  
+  .ads-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .ad-card {
+    padding: 15px;
+  }
+  
+  .main-checkmark {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .checkmark-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .congratulations-title {
+    font-size: 2rem;
+  }
+  
+  .congratulations-subtitle {
+    font-size: 1rem;
+  }
+  
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 18px 30px;
+  }
+  
+  .ads-title {
+    font-size: 1.25rem;
+  }
+}
