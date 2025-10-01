@@ -19,6 +19,10 @@
 .mission-section {
   text-align: center;
   margin-bottom: 80px;
+  background-color: #e9ecef;
+  padding: 60px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .mission-label {
@@ -179,6 +183,7 @@
   
   .mission-section {
     margin-bottom: 60px;
+    padding: 40px 25px;
   }
   
   .about-title {
@@ -209,6 +214,10 @@
 }
 
 @media (max-width: 480px) {
+  .mission-section {
+    padding: 30px 20px;
+  }
+  
   .about-title {
     font-size: 2rem;
   }

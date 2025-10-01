@@ -73,9 +73,17 @@
 }
 
 .faq-icon {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: #666;
   transition: transform 0.3s ease;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: bold;
+  line-height: 1;
 }
 
 .faq-icon.open {
