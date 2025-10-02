@@ -32,6 +32,8 @@ const AboutPage: React.FC = () => {
                   src="/freewill-1.jpg" 
                   alt="Freewill Company 1" 
                   className="about-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -82,6 +84,8 @@ const AboutPage: React.FC = () => {
                   src="/freewill-2.jpg" 
                   alt="Freewill Company 2" 
                   className="about-image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
