@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
     }, 8000); // Slower rotation to reduce lag
 
     return () => clearInterval(interval);
-  }, []);
+  }, [heroImages.length]);
 
   return (
     <section className="hero-section">

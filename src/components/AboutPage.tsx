@@ -30,7 +30,7 @@ const AboutPage: React.FC = () => {
               <div className="banner-ad">
                 <img 
                   src="/freewill-1.jpg" 
-                  alt="Freewill Company Image 1" 
+                  alt="Freewill Company 1" 
                   className="about-image"
                 />
               </div>
@@ -80,7 +80,7 @@ const AboutPage: React.FC = () => {
               <div className="banner-ad">
                 <img 
                   src="/freewill-2.jpg" 
-                  alt="Freewill Company Image 2" 
+                  alt="Freewill Company 2" 
                   className="about-image"
                 />
               </div>
