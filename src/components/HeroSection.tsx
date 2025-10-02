@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
             style={{
               backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'center 30%',
               backgroundRepeat: 'no-repeat'
             }}
           />
