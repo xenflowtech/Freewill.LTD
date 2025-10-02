@@ -25,12 +25,12 @@ const AboutPage: React.FC = () => {
               <div className="story-text">
                 <h2 className="section-title">Our Story</h2>
                 <p className="section-text">
-                  Freewill.ltd was founded by a team of legal experts and technology enthusiasts who recognized the need for a more accessible and affordable way to create wills. We saw that many people were putting off this important task due to complexity and cost, leaving their families vulnerable. Our goal was to create a solution that empowers individuals to take control of their future, with clear guidance and support every step of the way.
+                  Freewill.ltd was founded by legal experts and technology enthusiasts who recognized the need for accessible will creation. We saw that many people were putting off this important task due to complexity and cost. Our goal is to empower individuals to take control of their future with clear guidance and support.
                 </p>
               </div>
               <div className="banner-ad">
-                <CachedImage 
-                  src="/freewill-1.jpg" 
+                <img 
+                  src="/freewill-1-min.jpg" 
                   alt="Freewill Company 1" 
                   className="about-image"
                   loading="lazy"
@@ -76,12 +76,12 @@ const AboutPage: React.FC = () => {
               <div className="team-text">
                 <h2 className="section-title">Our Team</h2>
                 <p className="section-text">
-                  Our team consists of experienced legal professionals, software developers, and customer support specialists who are passionate about making a difference. We work together to ensure our platform is not only technically sound but also legally accurate and user-focused. We are dedicated to continuously improving our services and providing the best possible experience.
+                  Our team consists of experienced legal professionals, software developers, and customer support specialists. We work together to ensure our platform is technically sound, legally accurate, and user-focused. We are dedicated to continuously improving our services.
                 </p>
               </div>
               <div className="banner-ad">
-                <CachedImage 
-                  src="/freewill-2.jpg" 
+                <img 
+                  src="/freewill-2-min.jpg" 
                   alt="Freewill Company 2" 
                   className="about-image"
                   loading="lazy"

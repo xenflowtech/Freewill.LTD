@@ -5,10 +5,10 @@ const HeroSection: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const heroImages = [
-    '/hero-1.jpg',
-    '/hero-2.jpg',
-    '/hero-3.jpg',
-    '/hero-4.jpg'
+    '/hero-1-min.jpg',
+    '/hero-2-min.jpg',
+    '/hero-3-min.jpg',
+    '/hero-4-min.jpg'
   ];
 
   // Simplified image rotation - no preloading to reduce lag
@@ -40,10 +40,10 @@ const HeroSection: React.FC = () => {
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title">
-            Create Your Will Today — Simple, Secure, And Stress-Free.
+            Create Your Will Today — Simple & Secure
           </h1>
           <p className="hero-subtitle">
-            Ensure your peace of mind and your family's future with our easy-to-use will creation service.
+            Ensure your family's future with our easy will creation service.
           </p>
         </div>
       </div>

@@ -1,0 +1,8 @@
+# In freewill-website/public/_redirects
+/*    /index.html   200
+
+# Cache images for 1 year
+/*.jpg    /index.html   200
+/*.png    /index.html   200
+/*.jpeg   /index.html   200
+/*.webp   /index.html   200
