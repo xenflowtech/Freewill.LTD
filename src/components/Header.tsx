@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import OptimizedImage from './OptimizedImage';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -7,7 +8,12 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="header-content">
         <Link to="/" className="logo">
-          <img src="/logo.png" alt="Freewill.Ltd" className="logo-image" />
+          <OptimizedImage 
+            src="/logo.png" 
+            alt="Freewill.Ltd" 
+            className="logo-image"
+            loading="eager"
+          />
           <span className="logo-text">Freewill.Ltd</span>
         </Link>
         <nav className="navigation">
