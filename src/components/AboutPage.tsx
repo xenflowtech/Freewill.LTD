@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import CachedImage from './CachedImage';
 import './AboutPage.css';
 
 const AboutPage: React.FC = () => {
