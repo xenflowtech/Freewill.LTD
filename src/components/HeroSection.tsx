@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './HeroSection.css';
 
 const HeroSection: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   
-  const heroImages = [
+  const heroImages = useMemo(() => [
     '/hero-1-min.jpg',
     '/hero-2-min.jpg',
     '/hero-3-min.jpg',
     '/hero-4-min.jpg'
-  ];
+  ], []);
 
   // Preload all images to prevent grey background flash
   useEffect(() => {
