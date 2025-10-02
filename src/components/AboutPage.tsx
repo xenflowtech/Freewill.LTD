@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import CachedImage from './CachedImage';
 import './AboutPage.css';
 
 const AboutPage: React.FC = () => {
@@ -28,12 +29,11 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
               <div className="banner-ad">
-                <img 
+                <CachedImage 
                   src="/freewill-1.jpg" 
                   alt="Freewill Company 1" 
                   className="about-image"
                   loading="lazy"
-                  decoding="async"
                 />
               </div>
             </div>
@@ -80,12 +80,11 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
               <div className="banner-ad">
-                <img 
+                <CachedImage 
                   src="/freewill-2.jpg" 
                   alt="Freewill Company 2" 
                   className="about-image"
                   loading="lazy"
-                  decoding="async"
                 />
               </div>
             </div>
