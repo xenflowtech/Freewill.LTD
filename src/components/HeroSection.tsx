@@ -3,6 +3,7 @@ import './HeroSection.css';
 
 const HeroSection: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   const heroImages = [
     '/hero-1-min.jpg',
@@ -11,30 +12,61 @@ const HeroSection: React.FC = () => {
     '/hero-4-min.jpg'
   ];
 
-  // Simplified image rotation - no preloading to reduce lag
+  // Preload all images to prevent grey background flash
   useEffect(() => {
+    const preloadImages = () => {
+      const imagePromises = heroImages.map((src) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = resolve;
+          img.onerror = reject;
+          img.src = src;
+        });
+      });
+
+      Promise.all(imagePromises)
+        .then(() => {
+          setImagesLoaded(true);
+        })
+        .catch((error) => {
+          console.warn('Some images failed to load:', error);
+          setImagesLoaded(true); // Still show the section even if some images fail
+        });
+    };
+
+    preloadImages();
+  }, [heroImages]);
+
+  // Image rotation with smooth transitions
+  useEffect(() => {
+    if (!imagesLoaded) return;
+
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 8000); // Slower rotation to reduce lag
+    }, 8000);
 
     return () => clearInterval(interval);
-  }, [heroImages.length]);
+  }, [heroImages.length, imagesLoaded]);
 
   return (
     <section className="hero-section">
-      {/* Simplified Background Image */}
+      {/* Background Images with smooth transitions */}
       <div className="hero-image-container">
-        <div
-          className="hero-image active"
-          style={{
-            backgroundImage: `url(${heroImages[currentImageIndex]})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center 30%',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
+        {heroImages.map((imageSrc, index) => (
+          <div
+            key={imageSrc}
+            className={`hero-image ${index === currentImageIndex ? 'active' : ''}`}
+            style={{
+              backgroundImage: `url(${imageSrc})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center 30%',
+              backgroundRepeat: 'no-repeat',
+              opacity: imagesLoaded ? (index === currentImageIndex ? 1 : 0) : 0
+            }}
+          />
+        ))}
       </div>
       
       <div className="hero-content">
